@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+scroll
+*/
+
+#style::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+#style::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+#style::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+  border: 2px solid #555555;
+}
+
+body {
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.container {
+    display: flex;
+    width: 50%;
+    height: 500px;
+    /* border: 1px solid rgb(245, 4, 4); */
+    box-shadow: 10px 5px 10px rgb(60, 57, 57);
+}
+
+.music-menu {
+    width: 45%;
+    height: 100%;
+    background-image:url('https://img.freepik.com/free-vector/golden-music-notes-background-design_1017-33910.jpg?w=360');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.music-menu h3 {
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+    border-bottom: 1px solid;
+    padding: 10px;
+    font-size: 24px;
+}
+.music-menu ul {
+    overflow-y:auto;
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+}
+
+.music-menu ul li {
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    color: #fff;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.music-menu ul li:hover {
+    background-color: rgb(0, 128, 128, .75);
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.music-menu ul li.active {
+    background-color: rgb(0, 128, 128, .75);
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.music-display {
+    width: 55%;
+    height: 100%;
+    background: #fff;
+    background: url('https://t3.ftcdn.net/jpg/02/23/60/54/360_F_223605406_nGKtPp42ZRx4ZxvrcVeT3Ek6V5Uw4ETh.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-display .img {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-display .img h3 {
+    font-size: 25px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.music-display img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    animation-name: imgCircle;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes imgCircle {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.music-display audio {
+    width: 85%;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 260px){
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        min-width: 100%;
+        min-height: 100vh;
+    }
+    .music-menu {
+        min-width: 100%;
+        min-height:50%;
+    }
+    .music-display {
+        min-width: 100%;
+        min-height: 50%;
+        padding-top: 30px;
+    }
+}
